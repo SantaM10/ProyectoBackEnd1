@@ -97,3 +97,54 @@ input:required {
 input:invalid {
   background-color: #dcd9e9;
 }
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 5px solid #0077b6;
+  background-color: #0077b6;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: auto;
+}
+td {
+  color: #fff;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.tabla-container {
+  max-width: 90%;
+  margin: auto;
+}
+.listado-container {
+  max-width: 80%;
+  margin: auto;
+}
+.boton-container {
+  margin-block: 30px;
+}
+
+.listado-servicios a {
+  text-decoration: none;
+  color: #0077b6;
+  font-size: 30px;
+}
+
+.listado-servicios li::marker {
+  content: 🐾;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+}
