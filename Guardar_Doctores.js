@@ -8,6 +8,7 @@ formularioDoctores.addEventListener("submit", (event) => {
     especialidad: document.getElementById("especialidad").value,
     consultorio: document.getElementById("consultorio").value,
     correo: document.getElementById("correo").value,
+    pacientes: [] // Agregamos un arreglo vacío para almacenar los pacientes asignados al doctor
   };
   const doctoresCookie = getCookie("doctores")
     ? JSON.parse(getCookie("doctores"))
