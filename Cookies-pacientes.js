@@ -17,20 +17,21 @@ for (let i = 0; i < pacientesCookie.length; i++) {
   const celdaEdad = fila.insertCell();
   const celdaTelefono = fila.insertCell();
   const celdaEspecialidad = fila.insertCell();
+  const celdaDoctorPaciente = fila.insertCell(); // Agregamos la celda para el doctor
+
   // Agregar la información a cada una de las celdas de la tabla
   celdaNombre.textContent = paciente.nombrePaciente;
   celdaApellido.textContent = paciente.apellidoPaciente;
-  celdaCedula.textContent = paciente. cedulaPaciente;
+  celdaCedula.textContent = paciente.cedulaPaciente;
   celdaEdad.textContent = paciente.edadPaciente;
   celdaTelefono.textContent = paciente.telefonoPaciente;
   celdaEspecialidad.textContent = paciente.especialidad;
-  // Colocar el doctor que atenderá al paciente
+
   // Buscar el doctor que tenga la especialidad requerida
   const doctorEspecialidad = doctoresCookie.find(doctor => doctor.especialidad === paciente.especialidad);
-  // Crear la celda
-  const celdaDoctorPaciente = fila.insertCell();
+
   // Si se encuentra un doctor, mostrar el nombre del doctor; de lo contrario, mostrar "Por asignar"
-  celdaDoctorPaciente.textContent = doctorEspecialidad ? doctorEspecialidad.nombre : "Por asignar";
+  celdaDoctorPaciente.textContent = doctorEspecialidad ? `${doctorEspecialidad.nombreDoctor} ${doctorEspecialidad.apellidoDoctor}` : "Por asignar";
 }
 
 // Función para obtener los datos de la cookie
